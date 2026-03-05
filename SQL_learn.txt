@@ -1,5 +1,7 @@
 SQL learn  
 
+To comment in SQL = use " -- " or " # " 
+
 Resources = 
     1. Cheat sheet = https://www.dbvis.com/wp-content/uploads/2024/04/SQL-Cheat-Sheet.pdf 
 
@@ -18,4 +20,25 @@ Exercise 4 - 7 = basic select queries
 
 Exercise 8 = 
     - use COUNT() to get the number or len of an output 
+    - use DISTINCT CITY for 
+
+Exercise 9 = 
+Query the two cities in STATION with the shortest and longest CITY names
+as well as their respective lengths (i.e.: number of characters in the name). 
+If there is more than one smallest or largest city, choose the one that comes first when ordered alphabetically.
+    - use LENGTH() ==> count char length 
+    - ORDER BY () ASC ==> orders the () from small to big 
+
+    SELECT CITY, LENGTH(CITY)
+    FROM STATION
+    ORDER BY LENGTH(CITY) ASC, CITY ASC
+    LIMIT 1
+
+    UNION # combines the result into one output 
+
+    SELECT CITY, LENGTH(CITY)
+    FROM STATION
+    ORDER BY LENGTH(CITY) DESC, CITY ASC
+    LIMIT 1;
+    # solution 
     
