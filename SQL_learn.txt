@@ -15,3 +15,7 @@ Exercise 3 -- Query all columns (attributes) for every row == conventional "*" q
     always put ";" in the end of the query 
 
 Exercise 4 - 7 = basic select queries 
+
+Exercise 8 = 
+    - use COUNT() to get the number or len of an output 
+    
