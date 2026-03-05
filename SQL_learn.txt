@@ -1,6 +1,17 @@
-SQL learn HackerRank 
+SQL learn  
 
 Resources = 
     1. Cheat sheet = https://www.dbvis.com/wp-content/uploads/2024/04/SQL-Cheat-Sheet.pdf 
 
-Exercise 1 -- 
+Exercise 1 -- the 'AND' key term inside a 'WHERE' condition must be indexed FORWARD 
+SELECT *
+FROM CITY
+WHERE Population > 100000
+  AND CountryCode = 'USA';
+
+Exercise 2 -- similar like ex 1 
+
+Exercise 3 -- Query all columns (attributes) for every row == conventional "*" query 
+    always put ";" in the end of the query 
+
+Exercise 4 - 7 = basic select queries 
