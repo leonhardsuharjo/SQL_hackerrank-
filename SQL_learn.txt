@@ -1,0 +1,6 @@
+SQL learn HackerRank 
+
+Resources = 
+    1. Cheat sheet = https://www.dbvis.com/wp-content/uploads/2024/04/SQL-Cheat-Sheet.pdf 
+
+Exercise 1 -- 
