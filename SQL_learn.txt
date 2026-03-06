@@ -1,6 +1,6 @@
 SQL learn  
 
-To comment in SQL = use " -- " or " # " 
+To comment in SQL = use " -- " or " # " ,, " -- " is recommended for hackerrank api
 
 Resources = 
     1. Cheat sheet = https://www.dbvis.com/wp-content/uploads/2024/04/SQL-Cheat-Sheet.pdf 
@@ -67,3 +67,32 @@ SELECT CITY,
         WHEN STARTS_WITH(CITY, 'a') OR STARTS_WITH(CITY, 'i') OR STARTS_WITH(CITY, 'u') OR STARTS_WITH(CITY, 'e') OR STARTS_WITH(CITY, 'o')
     END AS Status
 FROM STATION;
+# correct solution = use regular "or" statements 
+SELECT DISTINCT CITY # distinct to get unique elements 
+FROM STATION
+WHERE CITY LIKE 'A%' # A% means start with A and ends with whatever char
+   OR CITY LIKE 'E%'
+   OR CITY LIKE 'I%'
+   OR CITY LIKE 'O%'
+   OR CITY LIKE 'U%';
+
+## Exercise 11 -- 
+SELECT DISTINCT CITY
+FROM STATION
+WHERE LOWER(LEFT(CITY,1)) IN ('a','e','i','o','u') -- case insensitve 
+AND LOWER(RIGHT(CITY,1)) IN ('a','e','i','o','u');
+
+## Ex 12 --  contain vowels as FIRST and LAST char 
+#failed attempt bcs regexp is not supported 
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY REGEXP '^[aeiou].*[aeiou]$'; 
+    -- REGEXP == pattern matching ,, external module  
+#correct solution 
+SELECT DISTINCT CITY
+FROM STATION
+WHERE LOWER(SUBSTR(CITY,1,1)) IN ('a','e','i','o','u')
+AND LOWER(SUBSTR(CITY,LENGTH(CITY),1)) IN ('a','e','i','o','u');
+    -- uses SUBSTR which gets a specific position char inside the list,, like the first or last char 
+    -- lower = makes the char low case, 
+    -- IN will check if 
